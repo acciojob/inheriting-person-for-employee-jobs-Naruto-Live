@@ -1,7 +1,6 @@
-// complete this js code
 function Person(name, age) {
-	this.name = name;
-	this.age = age;
+    this.name = name;
+    this.age = age;
 }
 
 Person.prototype.greet = function () {
@@ -9,8 +8,8 @@ Person.prototype.greet = function () {
 };
 
 function Employee(name, age, jobTitle) {
-	person.call(this , name , age);
-	this.jobTitle = jobTitle;
+    Person.call(this, name, age);
+    this.jobTitle = jobTitle;
 }
 
 Employee.prototype = Object.create(Person.prototype);
